@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      My amazing third app!
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>
+    <ion-list>
+      <ion-item-sliding *ngFor="let tarefa of tarefas">
+        <ion-item>
+          <h2>{{tarefa.descricao}}</h2>
+        </ion-item>
+        <ion-item-options side="left">   
+          <button ion-button (click)="finalizar(tarefa.id)">
+            Finalizar
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+    <ion-fab right bottom>
+      <button ion-fab (click)="adicionar()"><ion-icon name="add"></ion-icon></button> 
+    </ion-fab>   
+  </p>
+</ion-content>
