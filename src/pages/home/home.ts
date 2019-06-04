@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import { TarefasProvider } from '../../providers/tarefas/tarefas';
+import { SocialSharing } from '@ionic-native/social-sharing';
+
 
 @Component({
   selector: 'page-home',
@@ -10,9 +12,10 @@ export class HomePage {
 
   tarefas = [];
 
-  constructor( public navCtrl: NavController,
-   public provedor: TarefasProvider,
-   public alertCtrl: AlertController
+  constructor(public navCtrl: NavController,
+    public provedor: TarefasProvider,
+    public alertCtrl: AlertController,
+    private socialSharing: SocialSharing
   ) {
   }
 
@@ -25,7 +28,7 @@ export class HomePage {
     )
   }
 
-  ionViewDidLoad(){
+  ionViewDidLoad() {
     this.listar();
   }
 
@@ -36,7 +39,7 @@ export class HomePage {
       }
     );
   }
-  
+
   adicionar() {
     const popup = this.alertCtrl.create({
       title: 'Tarefa',
@@ -68,5 +71,8 @@ export class HomePage {
     });
     popup.present();
   }
- 
+
+  compartilhar(texto) {
+    this.socialSharing.share(texto);
+  }
 }
