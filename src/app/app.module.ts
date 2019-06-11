@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SocialSharing } from '@ionic-native/social-sharing';
+import { Calendar } from '@ionic-native/calendar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -28,7 +29,8 @@ import { TarefasProvider } from '../providers/tarefas/tarefas';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     TarefasProvider,
-    SocialSharing
+    SocialSharing,
+    Calendar
   ]
 })
 export class AppModule {}

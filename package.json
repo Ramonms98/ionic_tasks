@@ -20,12 +20,17 @@
     "@angular/http": "5.2.11",
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
+    "@ionic-native/calendar": "^4.20.0",
     "@ionic-native/core": "~4.20.0",
+    "@ionic-native/media-capture": "^5.8.0",
     "@ionic-native/social-sharing": "^4.20.0",
     "@ionic-native/splash-screen": "~4.20.0",
     "@ionic-native/status-bar": "~4.20.0",
     "@ionic/storage": "2.2.0",
     "cordova-android": "8.0.0",
+    "cordova-plugin-calendar": "5.1.4",
+    "cordova-plugin-file": "6.0.1",
+    "cordova-plugin-media-capture": "3.0.2",
     "cordova-plugin-x-socialsharing": "5.4.4",
     "es6-promise-plugin": "4.2.2",
     "firebase": "^6.0.2",
@@ -58,7 +63,9 @@
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-x-socialsharing": {
         "ANDROID_SUPPORT_V4_VERSION": "24.1.1+"
-      }
+      },
+      "cordova-plugin-calendar": {},
+      "cordova-plugin-media-capture": {}
     },
     "platforms": [
       "android"

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import { TarefasProvider } from '../../providers/tarefas/tarefas';
 import { SocialSharing } from '@ionic-native/social-sharing';
-
+import { Calendar } from '@ionic-native/calendar';
 
 @Component({
   selector: 'page-home',
@@ -15,7 +15,8 @@ export class HomePage {
   constructor(public navCtrl: NavController,
     public provedor: TarefasProvider,
     public alertCtrl: AlertController,
-    private socialSharing: SocialSharing
+    private socialSharing: SocialSharing,
+    private calendar: Calendar
   ) {
   }
 
@@ -75,4 +76,9 @@ export class HomePage {
   compartilhar(texto) {
     this.socialSharing.share(texto);
   }
+
+  agendar(texto) {
+    this.calendar.createEvent(texto, 'Adicionado pelo aplicativo ionic_tasks', '', new Date(), new Date());
+  }
+
 }
